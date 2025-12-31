@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Username Finder</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="card">
+      <h1>Username Finder</h1>
+      <p class="muted">
+        Enter a username and this tool will generate web searches + attempt common profile URL checks.
+        Use responsibly — only search usernames you’re allowed to investigate.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Enter Username</h2>
+      <div class="row">
+        <input id="u" placeholder="Roblox username (or any username)" autocomplete="off" />
+        <button id="go" class="primary">Search</button>
+        <button id="clear">Clear</button>
+      </div>
+      <div id="msg" class="note warn hidden"></div>
+    </section>
+
+    <section class="card">
+      <h2>Search Engines</h2>
+      <p class="muted">Click to search the whole web for exact matches.</p>
+      <div id="engines" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Common Sites (quick checks)</h2>
+      <p class="muted">
+        These are best-effort checks based on common profile URL patterns.
+        Some sites block automated checks — those will show as “Can’t verify here”.
+      </p>
+      <div class="row">
+        <button id="checkAll">Run Checks</button>
+      </div>
+      <div id="results" class="table"></div>
+    </section>
+
+    <footer class="muted small center">
+      This tool doesn’t hack anything. It only searches public pages.
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
